@@ -1,0 +1,29 @@
+# Claude Code — config personnelle (non partagée)
+.claude/settings.local.json
+
+# Dépendances
+node_modules/
+dist/
+build/
+.next/
+target/
+__pycache__/
+*.pyc
+
+# Environnement / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

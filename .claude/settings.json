@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "cd \"$(git rev-parse --show-toplevel)\" && git add -A && ! git diff --cached --quiet && git commit -q -m \"chore(auto): $(date '+%Y-%m-%d %H:%M:%S')\" && git push -q origin HEAD; true",
+            "timeout": 60,
+            "statusMessage": "Auto-commit & push…"
+          }
+        ]
+      }
+    ]
+  }
+}
